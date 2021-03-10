@@ -4,12 +4,12 @@
 
 # Android PdfViewer
 
-__AndroidPdfViewer 1.x is available on [AndroidPdfViewerV1](https://github.com/barteksc/AndroidPdfViewerV1)
+__AndroidPdfViewer 1.x is available on [AndroidPdfViewerV1](https://github.com/pangyujie/AndroidPdfViewerV1)
 repo, where can be developed independently. Version 1.x uses different engine for drawing document on canvas,
 so if you don't like 2.x version, try 1.x.__
 
 Library for displaying PDF documents on Android, with `animations`, `gestures`, `zoom` and `double tap` support.
-It is based on [PdfiumAndroid](https://github.com/barteksc/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
+It is based on [PdfiumAndroid](https://github.com/pangyujie/PdfiumAndroid) for decoding PDF files. Works on API 11 (Android 3.0) and higher.
 Licensed under Apache License 2.0.
 
 ## What's new in 3.2.0-beta.1?
@@ -37,11 +37,11 @@ Licensed under Apache License 2.0.
 
 Add to _build.gradle_:
 
-`implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'`
+`implementation 'com.github.pangyujie:android-pdf-viewer:3.2.0-beta.1'`
 
 or if you want to use more stable version:
  
-`implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'`
+`implementation 'com.github.pangyujie:android-pdf-viewer:2.8.2'`
 
 Library is available in jcenter repository, probably it'll be in Maven Central soon.
 
@@ -55,7 +55,7 @@ If you are using ProGuard, add following rule to proguard config file:
 ## Include PDFView in your layout
 
 ``` xml
-<com.github.barteksc.pdfviewer.PDFView
+<com.github.pangyujie.pdfviewer.PDFView
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
@@ -127,12 +127,12 @@ There is default implementation shipped with AndroidPdfViewer, and you can use i
 By using constructor with second argument (`new DefaultScrollHandle(this, true)`), handle can be placed left or top.
 
 You can also create custom scroll handles, just implement **ScrollHandle** interface.
-All methods are documented as Javadoc comments on interface [source](https://github.com/barteksc/AndroidPdfViewer/tree/master/android-pdf-viewer/src/main/java/com/github/barteksc/pdfviewer/scroll/ScrollHandle.java).
+All methods are documented as Javadoc comments on interface [source](https://github.com/pangyujie/AndroidPdfViewer/tree/master/android-pdf-viewer/src/main/java/com/github/pangyujie/pdfviewer/scroll/ScrollHandle.java).
 
 ## Document sources
 Version 2.3.0 introduced _document sources_, which are just providers for PDF documents.
 Every provider implements **DocumentSource** interface.
-Predefined providers are available in **com.github.barteksc.pdfviewer.source** package and can be used as
+Predefined providers are available in **com.github.pangyujie.pdfviewer.source** package and can be used as
 samples for creating custom ones.
 
 Predefined providers can be used with shorthand methods:
@@ -151,7 +151,7 @@ is used and clicking on link that references page in same document causes jump t
 and clicking on link that targets some URI causes opening it in default application.
 
 You can also create custom link handlers, just implement **LinkHandler** interface and set it using
-`Configurator#linkHandler(LinkHandler)` method. Take a look at [DefaultLinkHandler](https://github.com/barteksc/AndroidPdfViewer/tree/master/android-pdf-viewer/src/main/java/com/github/barteksc/pdfviewer/link/DefaultLinkHandler.java)
+`Configurator#linkHandler(LinkHandler)` method. Take a look at [DefaultLinkHandler](https://github.com/pangyujie/AndroidPdfViewer/tree/master/android-pdf-viewer/src/main/java/com/github/pangyujie/pdfviewer/link/DefaultLinkHandler.java)
 source to implement custom behavior.
 
 ## Pages fit policy
